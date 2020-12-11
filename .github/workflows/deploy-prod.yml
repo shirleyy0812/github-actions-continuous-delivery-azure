@@ -3,7 +3,7 @@ name: Production deployment
 on:
   workflow_run:
     workflows: ["Stage the app"]
-    branches: [main]
+    branches: [master]
     types: 
       - completed
 
