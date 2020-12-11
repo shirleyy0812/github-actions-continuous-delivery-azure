@@ -3,7 +3,7 @@ name: Stage the app
 on: 
   push:
     branches:
-      - main
+      - master
 
 env:
   DOCKER_IMAGE_NAME: shirleyy0812-azure-ttt
