@@ -1,9 +1,11 @@
 name: Production deployment
 
-on: 
-  push:
-    branches:
-      - master
+on:
+  workflow_run:
+    workflows: ["Stage the app"]
+    branches: [main]
+    types: 
+      - completed
 
 env:
   DOCKER_IMAGE_NAME: shirleyy0812-azure-ttt # Must not exist as a package associated with a different repo!
